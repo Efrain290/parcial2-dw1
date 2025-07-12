@@ -17,8 +17,8 @@ Este sitio web es una implementación para el Parcial 2 de DPW107, combinando el
 
 ### Interfaz Principal (Parte 1 y 2)
 
-![Captura de pantalla de la interfaz principal](c:\Users\asus\Pictures\Screenshots\Screenshot 2025-07-11 232512.png)
+![Captura de pantalla de la interfaz principal](Screenshot 2025-07-11 232512.png)
 
 ### Contadores y Modal en Acción
 
-![Captura de pantalla de los contadores y modal](c:\Users\asus\Pictures\Screenshots\Screenshot 2025-07-11 232820.png)
+![Captura de pantalla de los contadores y modal](Screenshot 2025-07-11 232820.png)
