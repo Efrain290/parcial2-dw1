@@ -1,28 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Función para incrementar y mostrar el contador
-    function incrementarContador(idContador) {
-        const elementoContador = document.getElementById(idContador);
-        let valorActual = parseInt(elementoContador.textContent);
-        valorActual++;
-        elementoContador.textContent = valorActual;
+// Función para modificar el contador de estrellas
+function modificarContador(idContador, valorCambio, resetear = false) {
+    const contadorElement = document.getElementById(idContador);
+    if (!contadorElement) {
+        console.error(`Elemento con ID ${idContador} no encontrado.`);
+        return;
     }
 
-    // Obtener todas las instancias de modales
-    const modals = document.querySelectorAll('.modal');
+    let valorActual = parseInt(contadorElement.textContent);
 
-    // Iterar sobre cada modal para añadir el evento 'shown.bs.modal'
-    modals.forEach(modal => {
-        modal.addEventListener('shown.bs.modal', function () {
-            // Determinar qué contador incrementar basado en el ID del modal
-            const modalId = modal.id;
-            if (modalId === 'modalCard1') {
-                incrementarContador('contador1');
-            } else if (modalId === 'modalCard2') {
-                incrementarContador('contador2');
-            } else if (modalId === 'modalCard3') {
-                incrementarContador('contador3');
-            }
-            // Puedes añadir más casos si tienes más modales/cards
-        });
-    });
-});
+    if (resetear) {
+        valorActual = 0;
+    } else {
+        valorActual += valorCambio;
+    }
+
+    // Asegurarse de que el contador no sea negativo
+    if (valorActual < 0) {
+        valorActual = 0;
+    }
+
+    contadorElement.textContent = valorActual;
+}
+
+// Puedes añadir más lógica JS aquí si es necesario
+// Por ejemplo, si los contadores deben guardar su estado o si hay otras interacciones.

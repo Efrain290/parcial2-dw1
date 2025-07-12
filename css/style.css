@@ -1,34 +1,20 @@
-/* css/style.css */
-/* Ajustes para el sidebar */
+/* Puedes añadir tus estilos personalizados aquí */
+
 .sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100; /* Detrás del navbar */
-  padding: 48px 0 0; /* Espacio para el navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    position: fixed; /* O sticky, dependiendo del comportamiento deseado */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Detrás del navbar */
+    padding: 48px 0 0; /* Padding superior para no chocar con el navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    background-color: #f8f9fa; /* Color de fondo claro */
+    width: inherit; /* Hereda el ancho de la columna Bootstrap */
 }
 
-@media (max-width: 767.98px) {
-  .sidebar {
-    top: 5rem; /* Ajuste para el navbar en móviles */
-  }
-}
-
-.sidebar-sticky {
-  height: calc(100vh - 48px);
-  overflow-x: hidden;
-  overflow-y: auto; /* Desplazamiento si el contenido es largo */
-}
-
-/* Ajustes para el contenido principal */
-main {
-    padding-top: 5rem; /* Espacio para el navbar fijo */
-}
-
+/* Ajuste para el contenido principal para que no quede debajo del sidebar */
 @media (min-width: 768px) {
-    main {
-        margin-left: 210px; /* Ajuste para el sidebar */
+    .col-md-9 {
+        margin-left: auto !important; /* Mueve el contenido principal a la derecha del sidebar */
     }
 }
